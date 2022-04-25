@@ -14,7 +14,6 @@ public class Main {
 		
 		System.out.printf("A=%.4f%n", area);
 		
-		
 		sc.close();
 
 	}
