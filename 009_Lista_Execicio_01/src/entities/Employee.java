@@ -10,16 +10,11 @@ public class Employee {
 		this.id = id;
 		this.name = name;
 		this.setSalary(salary);
-		//increaseSalary();
 	}
 
 	public Integer getId() {
 		return id;
 	}
-
-	/*
-	 * public void setId(Integer id) { this.id = id; }
-	 */
 
 	public String getName() {
 		return name;
@@ -49,5 +44,4 @@ public class Employee {
 				+ ", " 
 				+ String.format("%.2f" ,salary);
 	}
-
 }
