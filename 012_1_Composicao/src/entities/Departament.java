@@ -1,6 +1,7 @@
 package entities;
 
 public class Departament {
+	
 	private String name;
 
 	public Departament() {
@@ -10,7 +11,7 @@ public class Departament {
 		this.name = name;
 	}
 
-	public String gatName() {
+	public String getName() {
 		return name;
 	}
 
