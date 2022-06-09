@@ -10,11 +10,15 @@ public class Program {
 		
 		Account acc = new Account(1001, "Marcelo", 1000.0);
 		acc.withDraw(200.0);
-		System.out.println("Saldo da conta: " + acc.getBalance());
+		System.out.println("Saldo da conta Física: " + acc.getBalance());
 		
 		Account acc1 = new SavingsAccount(1002, "Maria", 1000.0, 0.01);
 		acc1.withDraw(200.0);
-		System.out.println("Saldo da conta: " + acc1.getBalance());
+		System.out.println("Saldo da Poupança: " + acc1.getBalance());
+		
+		Account acc2 = new BusinessAccount(1003, "Telma", 1000.0, 500.0);
+		acc2.withDraw(200.0);
+		System.out.println("Saldo da conta Juridica: " + acc2.getBalance());
 
 		/*
 		Account acc = new Account(1001, "Marcelo", 0.0);

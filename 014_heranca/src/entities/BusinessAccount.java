@@ -2,7 +2,7 @@ package entities;
 
 public class BusinessAccount extends Account {
 	private Double loanLimit;
-	
+
 	public BusinessAccount() {
 		super();
 	}
@@ -15,14 +15,21 @@ public class BusinessAccount extends Account {
 	public Double getLoanLimit() {
 		return loanLimit;
 	}
-	
+
 	public void setLoanLimit(Double loanLimit) {
 		this.loanLimit = loanLimit;
 	}
-	
+
 	public void loan(Double amount) {
-		if(amount >= loanLimit) {
+		if (amount >= loanLimit) {
 			balance += amount - 10.0;
 		}
+	}
+
+	// Saque
+	@Override
+	public void withDraw(Double amount) {
+		super.withDraw(amount); // executa as operações nomais
+		balance -= 2;// Acrescente o desconto de R$ 2.0
 	}
 }
