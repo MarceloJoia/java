@@ -18,8 +18,14 @@ public class SavingsAccount extends Account {
 		return interestRate;
 	}
 
-	//taxa de juro
+	// taxa de juro
 	public void updateBalance() {
-		balance += balance + interestRate;
+		balance += balance * interestRate;
+	}
+
+	// Saque
+	@Override
+	public void withDraw(Double amount) {
+		balance -= amount;
 	}
 }
