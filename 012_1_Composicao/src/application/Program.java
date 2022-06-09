@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Departament;
+import entities.Department;
 import entities.HourContract;
 import entities.Worker;
 import entities.enums.WorkerLevel;
@@ -30,7 +30,7 @@ public class Program {
 		System.out.print("Salário base: ");
 		Double baseSalary = sc.nextDouble();
 		// Instanciar o trabalhador
-		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Departament(departamentName));
+		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departamentName));
 
 		System.out.print("Quantos contratos para este trabalhador? ");
 		int n = sc.nextInt();
@@ -48,13 +48,13 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("Insira o mês e o ano para calcular a renda (MM/YYYY): ");
-		String mothAndYear = sc.next();
-		int moth = Integer.parseInt(mothAndYear.substring(0, 2));
-		int year = Integer.parseInt(mothAndYear.substring(3));
+		String monthAndYear = sc.next();
+		int month = Integer.parseInt(monthAndYear.substring(0, 2));
+		int year = Integer.parseInt(monthAndYear.substring(3));
 		
 		System.out.println("Nome: " + worker.getName());
 		System.out.println("Departamento: "+ worker.getDepartament().getName());
-		System.out.printf("Renda para " + mothAndYear + ": R$ " + String.format("%.2f", worker.income(year, moth)));
+		System.out.printf("Renda para " + monthAndYear + ": R$ " + String.format("%.2f", worker.income(year, month)));
 
 		sc.close();
 	}

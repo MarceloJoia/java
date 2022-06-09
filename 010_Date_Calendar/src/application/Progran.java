@@ -16,8 +16,8 @@ public class Progran {
 		
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
-		//cal.add(Calendar.HOUR_OF_DAY, 4);
-		//data = cal.getTime();
+		cal.add(Calendar.HOUR_OF_DAY, 4);
+		data = cal.getTime();
 		int minutes = cal.get(Calendar.MINUTE);
 		int month = 1 + cal.get(Calendar.MONTH);
 
