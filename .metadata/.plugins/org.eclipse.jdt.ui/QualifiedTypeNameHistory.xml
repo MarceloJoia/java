@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="entities.Retangle"/>
     <fullyQualifiedTypeName name="java.awt.geom.Area"/>
-    <fullyQualifiedTypeName name="entitis.Employee"/>
     <fullyQualifiedTypeName name="entities.Calculator"/>
     <fullyQualifiedTypeName name="util.CurrencyConverter"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -18,7 +17,6 @@
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="entities.Employee"/>
     <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.TimeZone"/>
     <fullyQualifiedTypeName name="java.text.ParseException"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
@@ -33,11 +31,8 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.time.Instant"/>
     <fullyQualifiedTypeName name="entities.Order"/>
-    <fullyQualifiedTypeName name="java.util.Locale"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="entities.Client"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="entities.enums.OrderStatus"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -47,4 +42,11 @@
     <fullyQualifiedTypeName name="entities.Account"/>
     <fullyQualifiedTypeName name="entities.SavingsAccount"/>
     <fullyQualifiedTypeName name="entities.BusinessAccount"/>
+    <fullyQualifiedTypeName name="java.time.temporal.TemporalAmount"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="entitis.OutsourcedEmployee"/>
+    <fullyQualifiedTypeName name="entitis.Employee"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 </qualifiedTypeNameHistroy>
