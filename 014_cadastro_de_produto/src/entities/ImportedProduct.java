@@ -21,15 +21,23 @@ public class ImportedProduct extends Product {
 	}
 
 	public Double totalPrice() {
-		return price + customsFee;
+		return getPrice() + customsFee;
 	}
 
 	@Override
 	public final String priceTag() {
+		return getName() 
+				+ " R$ " 
+				+ String.format("%.2f", totalPrice())
+				+ " (Taxa de alfândega: $ " 
+				+ String.format("%.2f", customsFee)
+				+ ")";
+		/*
 		StringBuilder sb = new StringBuilder();
 		sb.append(name);
-		sb.append(" $ " + totalPrice());
-		sb.append(" (Taxa de alfandega: $ " + customsFee + ") ");
+		sb.append(" $ " + String.format("%.2f", totalPrice()));
+		sb.append(" (Taxa de alfândega: $ " + String.format("%.2f", customsFee) + ") ");
 		return sb.toString();
+		*/
 	}
 }

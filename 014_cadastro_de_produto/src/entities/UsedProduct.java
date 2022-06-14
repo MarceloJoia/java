@@ -28,12 +28,19 @@ public class UsedProduct extends Product {
 
 	@Override
 	public final String priceTag() {
+		return getName()
+				+ " (Usado) R$ "
+				+ String.format("%.2f", getPrice())
+				+ " (Data de fabricação: "
+				+ sdf.format(manufactoryDate) + ")";
+		/*
 		StringBuilder sb = new StringBuilder();
 		sb.append(name);
-		sb.append(" (Usado) $ " + price);
+		sb.append(" (Usado) $ " + String.format("%.2f", getPrice()));
 		sb.append(" (Data de fabricação: ");
 		sb.append(sdf.format(manufactoryDate) + ")");
 
 		return sb.toString();
+		*/
 	}
 }

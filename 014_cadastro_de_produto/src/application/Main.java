@@ -2,6 +2,9 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -17,14 +20,42 @@ public class Main {
 
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-		Product p1 = new ImportedProduct("NootBook", 4000.00, 20.00);
-		Product p2 = new Product("Tablet", 1500.00);
-		Product p3 = new UsedProduct("Iphone", 400.00, sdf.parse("15/03/2017"));
+		List<Product> list = new ArrayList<Product>();
 
-		System.out.println(p1.priceTag());
-		System.out.println(p2.priceTag());
-		System.out.println(p3.priceTag());
+		System.out.print("Digite o número de produtos: ");
+		int n = sc.nextInt();
 
+		for (int i = 1; i <= n; i++) {
+			System.out.println("Dados do produto #" + i + ":");
+			System.out.print("Novo, Usado ou Importado (n/u/i)? ");
+			char tp = sc.next().charAt(0);
+
+			sc.nextLine();
+			System.out.print("Nome: ");
+			String name = sc.nextLine();
+
+			System.out.print("Preço: ");
+			Double price = sc.nextDouble();
+
+			if (tp == 'n') {
+				list.add(new Product(name, price));
+			} else if (tp == 'i') {
+				System.out.print("Taxa alfandegária: ");
+				Double customsFee = sc.nextDouble();
+				list.add(new ImportedProduct(name, price, customsFee));
+			} else {
+				System.out.print("Data de fabricação (DD/MM/YYYY): ");
+				Date date = sdf.parse(sc.next());
+				list.add(new UsedProduct(name, price, date));
+			}
+		}
+		
+		System.out.println();
+		System.out.println("ETIQUETAS DE PREÇO:");
+
+		 for(Product p : list) {
+			System.out.println(p.priceTag());
+		}
 		sc.close();
 
 	}
