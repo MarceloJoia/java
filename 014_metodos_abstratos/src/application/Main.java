@@ -42,12 +42,13 @@ public class Main {
 				list.add(new Circle(color, radius));
 			}
 		}
-		
+
 		System.out.println();
 		System.out.println("SHAPE AREAS:");
-		
+
 		for(Shape sh : list) {
-			System.out.printf("%.2f%n" ,sh.area());
+			//System.out.printf("%.2f%n" ,sh.area());
+			System.out.println(String.format("%.2f%n", sh.area()));
 		}
 
 		sc.close();
