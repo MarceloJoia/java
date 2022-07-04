@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		File file = new File("C:\\ws-sts\\Java\\017_file_scanner_IOException\\file.txt");
+		File file = new File("C:\\ws-sts\\Java\\017_0_file_scanner_IOException\\file.txt");
 		Scanner sc = null;
 
 		try {
