@@ -41,7 +41,7 @@ public class Employee {
 		return id 
 				+ ", " 
 				+ name 
-				+ ", " 
+				+ ", Salário: R$ " 
 				+ String.format("%.2f" ,salary);
 	}
 }

@@ -15,16 +15,15 @@ public class Main {
 		
 		double amount = 0.0;
 		for(int i=0; i<n; i++) {
-			System.out.print("Pessoa: ");
+			int count = i+1;
+			System.out.print("Altura da "+ count +"ª pessoa: ");
 			vector[i] = sc.nextDouble();
 			amount += vector[i];
 		}
 		
 		double media = (double)amount / n;
-		System.out.printf("AVERAGE HEIGHT = %.2f%n", media);
+		System.out.printf("Altura média das pessoas = %.2f%n", media);
 		
 		sc.close();
-
 	}
-
 }
